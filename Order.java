@@ -1,31 +1,35 @@
 package Medhis.IDE.IDE.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Data;
 
 import java.util.Date;
 
-@Data
 @Entity
+@Data
+@Table(name = "orders")
 public class Order {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long regId;
 
-    private String barcode;
-    private Integer hospitalId;
+    private Integer cariId;
+    private Integer xidmetId;
     private String xidmetAdi;
+    private Integer sifarisId;
     private String sifarisAdi;
+    private Integer labId;
     private String pasient;
+    private Integer pasientId;
     private Integer pasientCins;
     private Date pasientDogumTarixi;
-    private Integer ideXidmetId;
+    private Integer IDEXidmetId;
+    private Integer statusId;
+    private String barcode;
+    private Integer hospitalId;
+    private Integer gonderenId;
     private String gonderenAdi;
     private Date gonderilenTarix;
 
-    // Getters and Setters
 }
